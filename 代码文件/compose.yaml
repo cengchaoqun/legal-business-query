@@ -1,0 +1,22 @@
+# 独立演示实例；端口仅发布至本机，不接入其他 MySQL 容器。
+name: legal-ask
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: legal-ask-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?请先运行 bootstrap_demo.py --prepare-env 生成随机密码}
+    ports:
+      - "127.0.0.1:3308:3306"
+    volumes:
+      - legal_ask_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=\"$$MYSQL_ROOT_PASSWORD\" mysqladmin ping -h 127.0.0.1 -u root --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+volumes:
+  legal_ask_mysql_data:
+    name: legal_ask_mysql_data

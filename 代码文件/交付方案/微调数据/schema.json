@@ -1,0 +1,74 @@
+{
+  "version": "legal_demo_v1",
+  "synthetic": true,
+  "tables": {
+    "v_team": {
+      "grain": "每团队一行",
+      "columns": {
+        "team_id": "INTEGER 主键",
+        "team_name": "VARCHAR(64) 团队名称"
+      }
+    },
+    "v_lawyer": {
+      "grain": "每律师一行",
+      "columns": {
+        "lawyer_id": "INTEGER 主键",
+        "lawyer_name": "VARCHAR(64) 演示化名",
+        "team_id": "INTEGER 当前团队，仅用于当前人员分组"
+      }
+    },
+    "v_case": {
+      "grain": "每案件一行",
+      "columns": {
+        "case_id": "INTEGER 主键",
+        "case_type": "VARCHAR(32) 案件类型",
+        "status": "VARCHAR(16) 当前状态",
+        "opened_at": "DATETIME 受理时间",
+        "closed_at": "DATETIME 结案时间，可空",
+        "owner_team_id": "INTEGER 案件归属团队，统计归属以此为准",
+        "responsible_lawyer_id": "INTEGER 主办律师",
+        "contracted_fee": "DECIMAL(14,2) 合同约定服务费人民币元，不是争议标的额",
+        "outcome": "VARCHAR(16) 结果，可空；不代表自动计算胜诉率"
+      }
+    },
+    "v_case_lawyer": {
+      "grain": "每案件每参与律师一行，联合主键(case_id,lawyer_id)",
+      "columns": {
+        "case_id": "INTEGER 案件外键",
+        "lawyer_id": "INTEGER 参与律师外键"
+      }
+    },
+    "v_receipt": {
+      "grain": "每收款或退款流水一行",
+      "columns": {
+        "receipt_id": "INTEGER 主键",
+        "case_id": "INTEGER 案件外键",
+        "received_at": "DATETIME 财务确认入账日期",
+        "amount": "DECIMAL(14,2) 正金额",
+        "receipt_type": "VARCHAR(16) PAYMENT收款/REFUND退款，净额需要赋符号",
+        "status": "VARCHAR(16) CONFIRMED已确认/VOID已作废"
+      }
+    },
+    "v_worklog": {
+      "grain": "每工时填报一行",
+      "columns": {
+        "worklog_id": "INTEGER 主键",
+        "case_id": "INTEGER 案件外键",
+        "lawyer_id": "INTEGER 填报律师外键",
+        "worked_at": "DATETIME 工作发生时间",
+        "hours": "DECIMAL(6,2) 工作小时",
+        "status": "VARCHAR(16) APPROVED已审核/PENDING待审核/REJECTED驳回"
+      }
+    }
+  },
+  "relationships": [
+    "v_case.owner_team_id -> v_team.team_id 多对一",
+    "v_case.responsible_lawyer_id -> v_lawyer.lawyer_id 多对一",
+    "v_case_lawyer.case_id -> v_case.case_id 多对一",
+    "v_case_lawyer.lawyer_id -> v_lawyer.lawyer_id 多对一",
+    "v_receipt.case_id -> v_case.case_id 多对一",
+    "v_worklog.case_id -> v_case.case_id 多对一",
+    "v_worklog.lawyer_id -> v_lawyer.lawyer_id 多对一",
+    "v_lawyer.team_id -> v_team.team_id 多对一；不用于推断案件历史归属"
+  ]
+}

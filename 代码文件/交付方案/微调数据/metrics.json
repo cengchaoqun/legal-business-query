@@ -1,0 +1,57 @@
+[
+  {
+    "id": "new_cases",
+    "name": "新收案件数",
+    "rule": "按opened_at的[start,end)统计案件，排除当前CANCELLED，每案一次；撤销历史未建模"
+  },
+  {
+    "id": "closed_cases",
+    "name": "期间结案数",
+    "rule": "按closed_at的[start,end)，status=CLOSED，每案一次；不要求本期受理"
+  },
+  {
+    "id": "open_cases",
+    "name": "当前在办数",
+    "rule": "当前status=OPEN，无需时间；历史在办需状态历史，首期不支持"
+  },
+  {
+    "id": "net_receipts",
+    "name": "期间净回款",
+    "rule": "按received_at的[start,end)，仅CONFIRMED，PAYMENT加amount，REFUND减amount，无数据返回0"
+  },
+  {
+    "id": "approved_hours",
+    "name": "有效工时",
+    "rule": "按worked_at的[start,end)，仅APPROVED，SUM(hours)，无数据返回0"
+  },
+  {
+    "id": "avg_close_days",
+    "name": "平均办案天数",
+    "rule": "本期结案案件AVG(DATEDIFF(closed_at,opened_at))，自然日、排除撤销，空集合NULL"
+  },
+  {
+    "id": "period_close_open_ratio",
+    "name": "期间收结比",
+    "rule": "本期结案数/本期新收数；两者时间字段不同，零分母NULL，可超过100%，不得称为新收案件结案率"
+  },
+  {
+    "id": "cohort_close_rate",
+    "name": "新收案件截至日结案率",
+    "rule": "本期新收非撤销案件中，closed_at早于明确截止时点且status=CLOSED的案件数/本期新收非撤销案件数；零分母NULL"
+  },
+  {
+    "id": "cohort_collection_rate",
+    "name": "新收案件截至日回款率",
+    "rule": "本期新收非撤销案件截至截止时点累计净回款/这些案件合同约定服务费总和；先按case_id聚合流水；零分母NULL；没有付款计划，不计算逾期应收"
+  },
+  {
+    "id": "participating_cases",
+    "name": "律师参与案件数",
+    "rule": "按案件受理时间过滤，通过v_case_lawyer按律师COUNT(DISTINCT case_id)；多人参与各计一次，各律师之和不是全所去重案件总数"
+  },
+  {
+    "id": "contract_fee",
+    "name": "签约服务费",
+    "rule": "本期新收且非撤销案件SUM(contracted_fee)，不得与回款和争议标的混用"
+  }
+]

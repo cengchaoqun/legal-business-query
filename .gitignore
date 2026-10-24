@@ -1,0 +1,17 @@
+**/.env
+**/.env.*
+!**/.env.example
+**/.venv/
+**/venv/
+**/node_modules/
+**/dist/
+**/__pycache__/
+**/.pytest_cache/
+**/.runtime/
+**/*.pyc
+**/*.log
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+**/*.pem
+**/*.key

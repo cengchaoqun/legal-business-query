@@ -1,0 +1,860 @@
+[
+  {
+    "id": "legal_001",
+    "family_id": "map_new",
+    "columns": [
+      "new_cases"
+    ],
+    "rows": [
+      [
+        4
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_002",
+    "family_id": "map_closed",
+    "columns": [
+      "closed_cases"
+    ],
+    "rows": [
+      [
+        3
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_003",
+    "family_id": "map_open",
+    "columns": [
+      "open_cases"
+    ],
+    "rows": [
+      [
+        2
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_004",
+    "family_id": "map_contract",
+    "columns": [
+      "contract_fee"
+    ],
+    "rows": [
+      [
+        35000
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_005",
+    "family_id": "map_money",
+    "columns": [
+      "net_receipts"
+    ],
+    "rows": [
+      [
+        17000
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_006",
+    "family_id": "map_hours",
+    "columns": [
+      "approved_hours"
+    ],
+    "rows": [
+      [
+        27
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_007",
+    "family_id": "map_type",
+    "columns": [
+      "case_type",
+      "cases"
+    ],
+    "rows": [
+      [
+        "LABOR",
+        2
+      ],
+      [
+        "CIVIL",
+        1
+      ],
+      [
+        "NON_LITIGATION",
+        1
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_008",
+    "family_id": "map_team",
+    "columns": [
+      "team_name",
+      "cases"
+    ],
+    "rows": [
+      [
+        "民商团队",
+        2
+      ],
+      [
+        "劳动团队",
+        2
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_009",
+    "family_id": "map_owner",
+    "columns": [
+      "lawyer_name",
+      "cases"
+    ],
+    "rows": [
+      [
+        "律师乙",
+        2
+      ],
+      [
+        "律师甲",
+        1
+      ],
+      [
+        "律师丁",
+        1
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_010",
+    "family_id": "map_result",
+    "columns": [
+      "outcome",
+      "cases"
+    ],
+    "rows": [
+      [
+        "OTHER",
+        1
+      ],
+      [
+        "SETTLED",
+        1
+      ],
+      [
+        "WON",
+        1
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_011",
+    "family_id": "value_labor",
+    "columns": [
+      "cases"
+    ],
+    "rows": [
+      [
+        2
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_012",
+    "family_id": "value_nonlit",
+    "columns": [
+      "cases"
+    ],
+    "rows": [
+      [
+        1
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_013",
+    "family_id": "value_civil",
+    "columns": [
+      "cases"
+    ],
+    "rows": [
+      [
+        1
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_014",
+    "family_id": "value_open",
+    "columns": [
+      "cases"
+    ],
+    "rows": [
+      [
+        1
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_015",
+    "family_id": "value_refund",
+    "columns": [
+      "refunds"
+    ],
+    "rows": [
+      [
+        1000
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_016",
+    "family_id": "value_approved",
+    "columns": [
+      "approved_hours"
+    ],
+    "rows": [
+      [
+        27
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_017",
+    "family_id": "value_team_alias",
+    "columns": [
+      "cases"
+    ],
+    "rows": [
+      [
+        2
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_018",
+    "family_id": "value_lawyer_alias",
+    "columns": [
+      "hours"
+    ],
+    "rows": [
+      [
+        10
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_021",
+    "family_id": "metric_days",
+    "columns": [
+      "avg_days"
+    ],
+    "rows": [
+      [
+        70.0
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_022",
+    "family_id": "metric_period_ratio",
+    "columns": [
+      "ratio"
+    ],
+    "rows": [
+      [
+        0.75
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_023",
+    "family_id": "metric_cohort",
+    "columns": [
+      "close_rate"
+    ],
+    "rows": [
+      [
+        0.5
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_024",
+    "family_id": "metric_collection",
+    "columns": [
+      "collection_rate"
+    ],
+    "rows": [
+      [
+        0.4
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_025",
+    "family_id": "metric_distinct",
+    "columns": [
+      "lawyers"
+    ],
+    "rows": [
+      [
+        3
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_026",
+    "family_id": "metric_share",
+    "columns": [
+      "labor_share"
+    ],
+    "rows": [
+      [
+        0.5
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_027",
+    "family_id": "metric_month",
+    "columns": [
+      "month",
+      "net_receipts"
+    ],
+    "rows": [
+      [
+        "2025-01",
+        6000
+      ],
+      [
+        "2025-02",
+        7000
+      ],
+      [
+        "2025-03",
+        -1000
+      ],
+      [
+        "2025-06",
+        5000
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_028",
+    "family_id": "metric_avg_hours",
+    "columns": [
+      "hours_per_active_lawyer"
+    ],
+    "rows": [
+      [
+        9.0
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_029",
+    "family_id": "metric_zero",
+    "columns": [
+      "rate"
+    ],
+    "rows": [
+      [
+        null
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_030",
+    "family_id": "metric_year_compare",
+    "columns": [
+      "year",
+      "net_receipts"
+    ],
+    "rows": [
+      [
+        "2024",
+        2000
+      ],
+      [
+        "2025",
+        17000
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_031",
+    "family_id": "clarify_time",
+    "columns": [
+      "new_cases"
+    ],
+    "rows": [
+      [
+        4
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_032",
+    "family_id": "clarify_grain",
+    "columns": [
+      "month",
+      "net_receipts"
+    ],
+    "rows": [
+      [
+        "2025-01",
+        6000
+      ],
+      [
+        "2025-02",
+        7000
+      ],
+      [
+        "2025-03",
+        -1000
+      ],
+      [
+        "2025-06",
+        5000
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_033",
+    "family_id": "clarify_close",
+    "columns": [
+      "ratio"
+    ],
+    "rows": [
+      [
+        0.75
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_034",
+    "family_id": "clarify_money",
+    "columns": [
+      "net_receipts"
+    ],
+    "rows": [
+      [
+        17000
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_035",
+    "family_id": "clarify_workload",
+    "columns": [
+      "lawyer_id",
+      "lawyer_name",
+      "hours"
+    ],
+    "rows": [
+      [
+        2,
+        "律师乙",
+        13
+      ],
+      [
+        1,
+        "律师甲",
+        10
+      ],
+      [
+        3,
+        "律师丙",
+        4
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_041",
+    "family_id": "join_participant",
+    "columns": [
+      "lawyer_id",
+      "lawyer_name",
+      "cases"
+    ],
+    "rows": [
+      [
+        2,
+        "律师乙",
+        3
+      ],
+      [
+        1,
+        "律师甲",
+        2
+      ],
+      [
+        4,
+        "律师丁",
+        1
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_042",
+    "family_id": "join_team_receipt",
+    "columns": [
+      "team_name",
+      "net_receipts"
+    ],
+    "rows": [
+      [
+        "民商团队",
+        9000
+      ],
+      [
+        "劳动团队",
+        5000
+      ],
+      [
+        "刑事团队",
+        3000
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_043",
+    "family_id": "join_case_hours",
+    "columns": [
+      "case_id",
+      "hours"
+    ],
+    "rows": [
+      [
+        1,
+        15
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_044",
+    "family_id": "join_no_payment",
+    "columns": [
+      "case_id"
+    ],
+    "rows": [
+      [
+        5
+      ],
+      [
+        6
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_045",
+    "family_id": "join_two_facts",
+    "columns": [
+      "case_id",
+      "net_receipts",
+      "hours"
+    ],
+    "rows": [
+      [
+        1,
+        9000,
+        15
+      ],
+      [
+        2,
+        5000,
+        8
+      ],
+      [
+        3,
+        3000,
+        4
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_046",
+    "family_id": "join_exists",
+    "columns": [
+      "cases"
+    ],
+    "rows": [
+      [
+        2
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_047",
+    "family_id": "join_zero_lawyer",
+    "columns": [
+      "lawyer_id",
+      "lawyer_name",
+      "hours"
+    ],
+    "rows": [
+      [
+        2,
+        "律师乙",
+        13
+      ],
+      [
+        1,
+        "律师甲",
+        10
+      ],
+      [
+        3,
+        "律师丙",
+        4
+      ],
+      [
+        4,
+        "律师丁",
+        0
+      ],
+      [
+        5,
+        "律师甲乙",
+        0
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_048",
+    "family_id": "join_top",
+    "columns": [
+      "case_id",
+      "net_receipts"
+    ],
+    "rows": [
+      [
+        1,
+        9000
+      ],
+      [
+        2,
+        5000
+      ],
+      [
+        3,
+        3000
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_049",
+    "family_id": "join_case_type_hours",
+    "columns": [
+      "case_type",
+      "hours"
+    ],
+    "rows": [
+      [
+        "CIVIL",
+        15
+      ],
+      [
+        "LABOR",
+        8
+      ],
+      [
+        "CRIMINAL",
+        4
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_050",
+    "family_id": "join_team_zero",
+    "columns": [
+      "team_id",
+      "team_name",
+      "cases"
+    ],
+    "rows": [
+      [
+        1,
+        "民商团队",
+        2
+      ],
+      [
+        2,
+        "劳动团队",
+        2
+      ],
+      [
+        3,
+        "刑事团队",
+        0
+      ],
+      [
+        4,
+        "新团队",
+        0
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_057",
+    "family_id": "safe_dialect",
+    "columns": [
+      "month",
+      "cases"
+    ],
+    "rows": [
+      [
+        "2025-02",
+        1
+      ],
+      [
+        "2025-03",
+        1
+      ],
+      [
+        "2025-05",
+        1
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_058",
+    "family_id": "safe_zero",
+    "columns": [
+      "net_receipts"
+    ],
+    "rows": [
+      [
+        0
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  },
+  {
+    "id": "legal_059",
+    "family_id": "safe_limit",
+    "columns": [
+      "case_id",
+      "contracted_fee"
+    ],
+    "rows": [
+      [
+        2,
+        20000
+      ],
+      [
+        1,
+        10000
+      ],
+      [
+        5,
+        5000
+      ],
+      [
+        6,
+        0
+      ]
+    ],
+    "status": "sqlite_compat_execution_ok",
+    "mysql_verified": false
+  }
+]
